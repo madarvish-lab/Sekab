@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سکب | سازمان کتاب‌بازها</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f7f3ea;--card:#fff;--ink:#23261f;--mute:#62665a;--g:#1f6b45;--g2:#2f9461;--soft:#e2f0e7;--acc:#d9902b;--line:#e6dfce;--hero1:#14503a;--hero2:#2f9461;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161814;--card:#21241d;--ink:#eeeadf;--mute:#a7a899;--g:#74d29c;--g2:#4bb37a;--soft:#22352a;--acc:#f0b24f;--line:#34372c;--hero1:#0f3326;--hero2:#1f6b45}}
+:root[data-theme="dark"]{--bg:#161814;--card:#21241d;--ink:#eeeadf;--mute:#a7a899;--g:#74d29c;--g2:#4bb37a;--soft:#22352a;--acc:#f0b24f;--line:#34372c;--hero1:#0f3326;--hero2:#1f6b45}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.95}
+.wrap{max-width:920px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);padding:8px 0}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;padding:4px 12px;border-radius:99px}
+nav a:hover{background:var(--soft);color:var(--g)}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;text-align:center;padding:64px 18px 72px;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07)}
+.hero::before{width:300px;height:300px;top:-110px;right:-80px}.hero::after{width:220px;height:220px;bottom:-90px;left:-60px}
+.hero>*{position:relative}
+.tag{display:inline-block;border:1px solid rgba(255,255,255,.5);padding:2px 16px;border-radius:99px;font-size:14px}
+.hero h1{font-size:clamp(44px,12vw,82px);margin:10px 0 0;font-weight:800;line-height:1.3}
+.hero h2{margin:0;font-weight:600;font-size:clamp(18px,4vw,24px)}
+.hero p{max-width:560px;margin:14px auto 22px;opacity:.92}
+.btn{display:inline-block;background:var(--acc);color:#1d1a12;border:0;font:inherit;font-weight:800;padding:10px 28px;border-radius:12px;text-decoration:none;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:-34px auto 0;position:relative}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;text-align:center;padding:14px 6px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.stat b{display:block;font-size:26px;color:var(--g)}.stat span{font-size:13px;color:var(--mute)}
+section{padding:30px 0 6px}
+h2.t{font-size:26px;margin:0 0 6px;font-weight:800}
+h2.t::before{content:"";display:inline-block;width:8px;height:24px;background:var(--acc);border-radius:4px;margin-left:10px;vertical-align:-4px}
+.lead{color:var(--mute);margin:0 0 16px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.card h3{margin:0 0 4px;font-size:18px;color:var(--g)}.card p{margin:0;color:var(--mute);font-size:15px}
+.num{display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--g);color:var(--card);align-items:center;justify-content:center;font-weight:800;margin-bottom:6px}
+.grade{display:flex;justify-content:space-between;gap:10px;padding:10px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line);margin-bottom:8px}
+.grade b{color:var(--g)}.grade span{color:var(--mute);font-size:14px}
+.roles{display:flex;flex-wrap:wrap;gap:10px}
+.role{background:var(--soft);color:var(--g);padding:6px 18px;border-radius:99px;font-weight:600;font-size:15px}
+form .row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:12px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:2px}
+input,select{width:100%;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+input:focus,select:focus{outline:2px solid var(--g2)}
+.book{border:1px dashed var(--g2);border-radius:14px;padding:12px;margin-bottom:12px;background:var(--soft)}
+.book h4{margin:0 0 8px;color:var(--g);font-size:15px;display:flex;justify-content:space-between}
+.book h4 button{background:none;border:0;color:var(--mute);cursor:pointer;font:inherit;font-size:13px}
+.btn2{background:var(--soft);color:var(--g);border:1px solid var(--g2);font:inherit;font-weight:600;padding:8px 18px;border-radius:10px;cursor:pointer}
+#msg{margin-top:14px;padding:14px;border-radius:12px;background:var(--soft);display:none;white-space:pre-wrap;font-size:14px}
+footer{text-align:center;color:var(--mute);padding:36px 0 44px;font-size:14px}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="#about">درباره‌ی سکب</a><a href="#goals">اهداف</a><a href="#how">شیوه‌ی کار</a><a href="#price">قیمت‌گذاری</a><a href="#team">تیم</a><a href="#join">ثبت‌نام</a></div></nav>
+
+<div class="hero">
+<span class="tag">سازمان مردم‌نهاد (سمن)</span>
+<h1>سکب</h1>
+<h2>سازمان کتاب‌بازها</h2>
+<p>بازارچه‌ی دوره‌ای تعویض و خرید و فروش کتاب‌های دست‌دوم؛ برای حفظ محیط زیست و گسترش فرهنگ کتاب‌خوانی.</p>
+<a class="btn" href="#join">ثبت‌نام فروشندگان</a>
+</div>
+
+<div class="wrap">
+<div class="stats">
+<div class="stat"><b>۲ ماه</b><span>فاصله‌ی بازارچه‌ها</span></div>
+<div class="stat"><b>۴</b><span>معیار قیمت‌گذاری</span></div>
+<div class="stat"><b>۷</b><span>عضو تیم</span></div>
+</div>
+
+<section id="about">
+<h2 class="t">بیان مسئله</h2>
+<p class="lead">با افزایش تعداد کتاب‌های چاپ‌شده، مصرف کاغذ و قطع درختان افزایش می‌یابد. تجدید چاپ‌های مکرر و بالا بودن قیمت کتاب نیز مشکل را دوچندان می‌کند. در همین حال، بسیاری از کتاب‌ها پس از یک بار مطالعه بدون استفاده باقی می‌مانند. سکب راهکاری است برای بازگرداندن این کتاب‌ها به چرخه‌ی مطالعه.</p>
+<div class="card"><p>مخاطبان اصلی ما نوجوانان هستند و حضور والدین و بزرگسالان نیز مورد استقبال است. بازارچه برای کودکان طراحی نشده است.</p></div>
+</section>
+
+<section id="goals">
+<h2 class="t">اهداف سازمان</h2>
+<div class="grid">
+<div class="card"><h3>🌲 حفاظت از محیط زیست</h3><p>هدف اصلی ما؛ کاهش مصرف کاغذ از طریق استفاده‌ی مجدد از کتاب‌ها.</p></div>
+<div class="card"><h3>🔄 اشتراک‌گذاری کتاب</h3><p>رساندن کتاب‌های مطالعه‌شده به دست خوانندگان تازه.</p></div>
+<div class="card"><h3>📖 ترویج کتاب‌خوانی</h3><p>دسترسی آسان‌تر و ارزان‌تر به کتاب، انگیزه‌ی مطالعه را افزایش می‌دهد.</p></div>
+<div class="card"><h3>🤝 همیاری</h3><p>افرادی که توان مالی خرید ندارند می‌توانند کتاب خود را تعویض کنند.</p></div>
+</div>
+</section>
+
+<section id="how">
+<h2 class="t">شیوه‌ی برگزاری بازارچه</h2>
+<div class="grid">
+<div class="card"><div class="num">۱</div><h3>ثبت و تحویل کتاب</h3><p>شرکت‌کنندگان رمان‌ها و کتاب‌های داستانی مطالعه‌شده را معرفی و تحویل می‌دهند.</p></div>
+<div class="card"><div class="num">۲</div><h3>قیمت‌گذاری</h3><p>مسئول قیمت‌گذاری بر اساس معیارهای مشخص، برای هر کتاب قیمت تعیین می‌کند.</p></div>
+<div class="card"><div class="num">۳</div><h3>تعویض یا خرید و فروش</h3><p>کتاب‌ها در بازارچه عرضه و مبادله می‌شوند.</p></div>
+<div class="card"><div class="num">۴</div><h3>تکرار دوره‌ای</h3><p>هر دو ماه یک‌بار فهرست کتاب‌ها به‌روز و کتاب‌های آسیب‌دیده و تازه‌رسیده قیمت‌گذاری می‌شوند.</p></div>
+</div>
+</section>
+
+<section id="price">
+<h2 class="t">نظام قیمت‌گذاری</h2>
+<p class="lead">قیمت پایه‌ی هر کتاب بر اساس سال چاپ، تعداد صفحات، نوع کتاب (ژانر) و وضعیت ظاهری تعیین می‌شود. سپس بسته به وضعیت، درصدی از قیمت پایه کسر می‌گردد. قیمت کتاب‌ها در هر بازارچه بازبینی و متناسب با تورم تعدیل می‌شود.</p>
+<div class="grade"><b>عالی</b><span>کمترین کسر از قیمت پایه</span></div>
+<div class="grade"><b>خوب</b><span>کسر اندک</span></div>
+<div class="grade"><b>متوسط</b><span>کسر بیشتر</span></div>
+<div class="grade"><b>آسیب‌دیده</b><span>بیشترین کسر؛ در هر دوره بازبینی می‌شود</span></div>
+</section>
+
+<section id="team">
+<h2 class="t">ساختار تیم</h2>
+<p class="lead">وظایف سازمان میان هفت عضو تقسیم شده است:</p>
+<div class="roles"><span class="role">مالی</span><span class="role">هماهنگی</span><span class="role">قیمت‌گذاری</span><span class="role">تبلیغات و اطلاع‌رسانی</span><span class="role">مکان و چیدمان بازارچه</span><span class="role">ثبت و فهرست کتاب‌ها</span><span class="role">مستندسازی و گزارش</span></div>
+</section>
+
+<section id="join">
+<h2 class="t">فرم ثبت‌نام فروشندگان</h2>
+<p class="lead">اگر می‌خواهید کتاب‌هایتان را در بازارچه عرضه کنید، فرم زیر را تکمیل کنید.</p>
+<div class="card">
+<form id="f">
+<div class="row">
+<div><label for="fn">نام</label><input id="fn" required></div>
+<div><label for="ln">نام خانوادگی</label><input id="ln" required></div>
+</div>
+<div class="row">
+<div><label for="gr">پایه</label><select id="gr" required><option value="">انتخاب کنید</option><option value="7">هفتم</option><option value="8">هشتم</option><option value="9">نهم</option></select></div>
+<div><label for="cl">کلاس</label><select id="cl" required disabled><option value="">ابتدا پایه را انتخاب کنید</option></select></div>
+</div>
+<div id="books"></div>
+<button type="button" class="btn2" id="add">+ افزودن کتاب دیگر</button>
+<div style="margin-top:16px"><button class="btn" type="submit">ثبت‌نام</button></div>
+</form>
+<div id="msg"></div>
+</div>
+</section>
+</div>
+<div class="wrap"><section id="admin" style="display:none"><h2 class="t">ثبت‌نام‌های دریافت‌شده (فقط مدیر)</h2><div id="list"></div></section></div>
+<footer>سکب · سازمان کتاب‌بازها — پروژه‌ی مطالعات اجتماعی</footer>
+
+<script>
+var GENRES=["رمان ایرانی","رمان خارجی","فانتزی","علمی‌تخیلی","پلیسی و معمایی","ترسناک","عاشقانه","تاریخی","ماجرایی","طنز","مجموعه داستان کوتاه","سایر"];
+var CONDS=["عالی","خوب","متوسط","آسیب‌دیده"];
+var books=document.getElementById("books"),n=0;
+function opts(a){return a.map(function(x){return "<option>"+x+"</option>"}).join("")}
+function addBook(){
+  n++;
+  var d=document.createElement("div");d.className="book";
+  d.innerHTML='<h4><span>کتاب <i class="i"></i></span><button type="button" class="rm">حذف</button></h4>'+
+  '<div class="row"><div><label>نام کتاب</label><input class="bt" required></div>'+
+  '<div><label>نویسنده</label><input class="ba"></div></div>'+
+  '<div class="row"><div><label>ژانر</label><select class="bg">'+opts(GENRES)+'</select></div>'+
+  '<div><label>وضعیت کتاب</label><select class="bc">'+opts(CONDS)+'</select></div></div>'+
+  '<div class="row"><div><label>نوع کاغذ</label><select class="paper">'+opts(["کاهی","سفید","کرم","گلاسه","نامشخص","سایر"])+'</select></div></div>'+
+  '<div class="row"><div><label>سال چاپ</label><input class="by" inputmode="numeric"></div>'+
+  '<div><label>تعداد صفحات</label><input class="bp" inputmode="numeric"></div></div>';
+  d.querySelector(".rm").onclick=function(){if(books.children.length>1){d.remove();num()}};
+  books.appendChild(d);num();
+}
+function num(){[].forEach.call(books.children,function(b,i){b.querySelector(".i").textContent=i+1})}
+var gr=document.getElementById("gr"),cl=document.getElementById("cl");
+gr.onchange=function(){
+  cl.textContent="";
+  var o=document.createElement("option");o.value="";
+  if(!gr.value){o.textContent="ابتدا پایه را انتخاب کنید";cl.appendChild(o);cl.disabled=true;return}
+  o.textContent="انتخاب کنید";cl.appendChild(o);
+  for(var i=1;i<=5;i++){var c=document.createElement("option");c.value=c.textContent=gr.value+"."+i;cl.appendChild(c)}
+  cl.disabled=false;
+};
+addBook();
+document.getElementById("add").onclick=addBook;
+document.getElementById("f").onsubmit=async function(e){
+  e.preventDefault();
+  var rec={first:fn.value.trim(),last:ln.value.trim(),grade:gr.value,cls:cl.value,at:new Date().toISOString(),books:[].map.call(books.children,function(b){
+    return {title:b.querySelector(".bt").value.trim(),author:b.querySelector(".ba").value.trim(),genre:b.querySelector(".bg").value,condition:b.querySelector(".bc").value,paper:b.querySelector(".paper").value,year:b.querySelector(".by").value.trim(),pages:b.querySelector(".bp").value.trim()}})};
+  var txt="ثبت‌نام: "+rec.first+" "+rec.last+" | پایه: "+rec.grade+" | کلاس: "+rec.cls+"\n"+rec.books.map(function(b,i){return (i+1)+". "+b.title+(b.author?" — "+b.author:"")+" | "+b.genre+" | "+b.condition+" | کاغذ: "+b.paper+(b.year?" | چاپ "+b.year:"")+(b.pages?" | "+b.pages+" صفحه":"")}).join("\n");
+  var saved=false;
+  try{
+    if(window.claude&&claude.use){var db=await claude.use("db");
+      if(db){await db.doc("responses/r"+Date.now()+Math.floor(Math.random()*1e4)).set(rec);saved=true}}
+  }catch(err){}
+  var m=document.getElementById("msg");m.style.display="block";
+  m.textContent=(saved?"ثبت‌نام شما ذخیره شد. سپاس از همراهی شما!\n\n":"ثبت‌نام شما آماده است. لطفاً متن زیر را کپی و برای تیم سکب ارسال کنید:\n\n")+txt;
+  if(!saved){var b=document.createElement("button");b.type="button";b.className="btn2";b.style.marginTop="10px";b.textContent="کپی متن";
+    b.onclick=function(){try{navigator.clipboard.writeText(txt);b.textContent="کپی شد ✓"}catch(x){}};m.appendChild(document.createElement("br"));m.appendChild(b)}
+};
+(async function(){
+  try{
+    if(!(window.claude&&claude.use))return;
+    var u=await claude.use("user");if(!u||!(await u.isOwner()))return;
+    var db=await claude.use("db");if(!db)return;
+    document.getElementById("admin").style.display="block";
+    var L=document.getElementById("list");
+    db.collection("responses").orderBy("at","desc").onSnapshot(function(s){
+      L.textContent="";
+      if(s.empty){L.textContent="هنوز ثبت‌نامی نیامده است.";return}
+      s.docs.forEach(function(d){
+        var r=d.data(),c=document.createElement("div");c.className="card";c.style.marginBottom="10px";
+        var h=document.createElement("h3");h.textContent=(r.first||"")+" "+(r.last||"");c.appendChild(h);
+        if(r.cls){var q=document.createElement("p");q.textContent="پایه "+r.grade+" · کلاس "+r.cls;c.appendChild(q)}
+        
+        (r.books||[]).forEach(function(b){var p=document.createElement("p");
+          p.textContent="• "+b.title+(b.author?" — "+b.author:"")+" | "+b.genre+" | "+b.condition+" | کاغذ: "+(b.paper||"نامشخص")+(b.year?" | چاپ "+b.year:"")+(b.pages?" | "+b.pages+" صفحه":"");c.appendChild(p)});
+        L.appendChild(c)});
+    },function(){});
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
